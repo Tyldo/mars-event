@@ -1,0 +1,74 @@
+<template>
+  <div class='event'>
+    <div class='info'>Концерт группы 30 Seconds To Mars</div>
+      <div class='date'>
+        <p>Дата концерта: 28.08.2018</p>
+        <p>Начало: 18:00</p>
+      </div>
+      
+      <p>
+Мультиплатиновая группа "Thirty Seconds To Mars" объявила о грандиозном европейском туре, который продлится всю весну 2018 года.
+
+Группа считается одной из самых волнующих по части живых концертов во всем мире. Их появление на церемонии MTV VMA потрясло зрителей: в выступлении группы была использована инновационная технология инфракрасного излучения. "Thirty Seconds To Mars" исполнили "Walk on Water" - первый сингл будущего пятого студийного альбома.
+
+"Thirty Seconds To Mars" - это Джаред Лето, Шеннон Лето и Томо Милишевич. Они продали более 15 миллионов копий альбомов во всем мире, и ежегодно их концерты проходят при переполненных залах и стадионах. Они получили множество премий, включая дюжину наград MTV, награду музыкального журнала "Billboard", а также их рекорд зафиксирован в Книге рекордов Гиннеса за самый продолжительный гастрольный тур в истории. 4 июля группа при помощи 90 съемочных групп на территории всех 50 штатов сняла документальный фильм "День из жизни Америки". Проект запечатлел американскую жизнь в рамках одного полного дня. Релиз фильма "День из жизни Америки" ожидается в 2018 году. "Thirty Seconds To Mars" в данный момент работают над пятым студийным альбомом, релиз которого также запланирован на 2018 год.
+    </p>
+  </div>
+     
+      
+
+  
+</template>
+
+<script>
+export default {
+  name: 'event'
+}
+</script>
+
+<style scoped>
+h2 {
+          text-align: center;
+        }
+        p {
+          padding: 0px 10px;
+          font-size: 30px;
+          font-weight: bold;
+        }
+        .date {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 100%;
+          font-size: 50px;
+          margin-top: 20px;
+          background: rgba(19, 35, 47, 0.9);
+          color: #a0b3b0;
+        }
+        .date > p {
+          width: auto;
+          height: 100%;
+          margin: 0;
+        }
+        .info {
+          text-align: center;
+          font-size: 35px;
+          width: 100%;
+          background: rgba(19, 35, 47, 0.9);
+          color: #a0b3b0;
+        }
+        summary {
+          margin: 20px 0px;
+          font-size: 35px;
+          text-align: center;
+          background: rgba(19, 35, 47, 0.9);
+          color: #a0b3b0;
+        }
+        summary:hover {
+          cursor: pointer;
+        }
+        summary::-webkit-details-marker {
+          display: none;
+        }
+        
+</style>
