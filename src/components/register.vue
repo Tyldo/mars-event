@@ -73,5 +73,10 @@ input {
           box-sizing: border-box;
 
         }
+        input {
+          width: 80%;
+          margin: 15px auto;
+
+        }
       }
 </style>
