@@ -31,12 +31,13 @@ input {
         align-items: center;
         padding: 15px 0px;
         background: rgba(19, 35, 47, 0.9);
+
       }
       input {
         font-family: inherit;
         font-size: 22px;
         display: block;
-        width: 490px;
+        width: 100%;
         height: 100%;
         background: none;
         border: 1px solid #a0b3b0;
@@ -65,5 +66,12 @@ input {
         text-align: center;
         width: 500px;
         color: #ffffff;
+      }
+      @media (max-width: 700px) {
+        .frm {
+          width: 100%;
+          box-sizing: border-box;
+
+        }
       }
 </style>
