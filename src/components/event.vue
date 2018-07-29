@@ -1,6 +1,6 @@
 <template>
   <div class='event'>
-    <div class='info'>Аришка <3</div>
+    <div class='info'>Концерт группы 30 Seconds To Mars</div>
       <div class='date'>
         <p>Дата концерта: 28.08.2018</p>
         <p>Начало: 18:00</p>
