@@ -39,7 +39,7 @@ h2 {
           display: flex;
           justify-content: space-around;
           align-items: center;
-          max-width: 80%;
+          max-width: 100%;
           font-size: 50px;
           margin-top: 20px;
           background: rgba(19, 35, 47, 0.9);

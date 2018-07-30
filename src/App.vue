@@ -35,9 +35,9 @@ body {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width:479px) {
   p {
-      color: red;
+      font-size: 0.5em;
       text-align: left;
 
   }
