@@ -1,12 +1,12 @@
 <template>
- <form action="https://httpbin.org/post" method="POST" >
+ <form v-on:submit.prevent="postData"  >
         <div class='frm'>
-          <h2>Check in</h2>
-          <input type='text' placeholder='First Name'></input>
-          <input type='text' placeholder='Last Name'></input>
-          <input type='email' placeholder='E-mail'></input>
-          <input type='password' placeholder='Password'></input>
-          <button tupe='submit'>I will be there!</button>
+          <h2 v-on:click="push">Check in</h2>
+          <input v-model='form.firstName' type='text' placeholder='First Name' name='firstName'></input>
+
+          <button  type='submit'>I will be there!</button>
+
+
         </div>
 
  </form>
@@ -14,9 +14,29 @@
 </template>
 
 <script>
-
+var api = require('../../api.js')
 export default {
-	name: 'register'
+	name: 'register',
+  data: function() {
+    return {
+
+      name: 'Soslan',
+      form: {
+        firstName:''
+      }
+    }
+  },
+  methods: {
+    postData:function(){
+      return api().post('user',this.form)
+        .then(function(res){
+          alert(res.data)
+        })
+    },
+    push: function(){
+      this.$router.push('About')
+    }
+  }
 }
 </script>
 
@@ -26,6 +46,7 @@ input {
         margin-bottom: 15px;
       }
       form {
+        border: 2px solid red;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -44,6 +65,7 @@ input {
         color: #ffffff;
         border-radius: 0;
         padding: 15px 5px;
+        box-sizing: border-box;
       }
       input:focus {
         outline: 0;
@@ -66,6 +88,7 @@ input {
         text-align: center;
         width: 500px;
         color: #ffffff;
+        border: 2px solid red;
       }
       @media (max-width: 700px) {
         .frm {
