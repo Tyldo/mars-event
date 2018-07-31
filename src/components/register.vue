@@ -3,6 +3,9 @@
         <div class='frm'>
           <h2 v-on:click="push">Check in</h2>
           <input v-model='form.firstName' type='text' placeholder='First Name' name='firstName'></input>
+          <input v-model='form.lastName' type='text' placeholder='Last Name' name='lastName'></input>
+          <input v-model='form.pass' type='password' placeholder='Password ' name='pass'></input>
+          <input v-model='form.mail' type='email' placeholder='Your e-mail' name='mail'></input>
 
           <button  type='submit'>I will be there!</button>
 
@@ -22,7 +25,10 @@ export default {
 
       name: 'Soslan',
       form: {
-        firstName:''
+        firstName:'',
+        lastName: '',
+        pass: '',
+        mail:''
       }
     }
   },
@@ -46,7 +52,6 @@ input {
         margin-bottom: 15px;
       }
       form {
-        border: 2px solid red;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -88,7 +93,6 @@ input {
         text-align: center;
         width: 500px;
         color: #ffffff;
-        border: 2px solid red;
       }
       @media (max-width: 700px) {
         .frm {
