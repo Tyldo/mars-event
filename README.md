@@ -1,4 +1,4 @@
-# some-event
+# Mars-event
 
 > A Vue.js project
 
