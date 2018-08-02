@@ -7,6 +7,14 @@ app = express();
 app.use(history())
 app.use(bodyParser.json())
 app.use(serveStatic(__dirname + "/dist"));
+const allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', '*');
+    res.header('Access-Control-Allow-Headers', '*');
+    next();
+}
+
+app.use(allowCrossDomain)
 
 app.get('/users', function(req,res){
   res.send('Пока никого нет :)')

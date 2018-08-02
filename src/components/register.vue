@@ -1,15 +1,15 @@
 <template>
  <form v-on:submit.prevent="postData"  >
-        <div class='frm'>
+        <div v-if='!sended' class='frm'>
           <h2 v-on:click="push">Check in</h2>
           <input v-model='form.firstName' type='text' placeholder='First Name' name='firstName'></input>
-          <input v-model='form.lastName' type='text' placeholder='Last Name' name='lastName'></input>
+          <input v-model='form.lastName' type='text' placeholder='Last ' name='lastName'></input>
           <input v-model='form.pass' type='password' placeholder='Password ' name='pass'></input>
           <input v-model='form.mail' type='email' placeholder='Your e-mail' name='mail'></input>
-
-          <button  type='submit'>I will be there!</button>
-
-
+          <button   type='submit'>I will be there!</button>
+        </div>
+        <div class='scss' v-if='sended'>
+          Вы успешно зарегистрировались!
         </div>
 
  </form>
@@ -28,16 +28,20 @@ export default {
         firstName:'',
         lastName: '',
         pass: '',
-        mail:''
-      }
+        mail:'',
+      },
+
+      sended:false
     }
   },
   methods: {
     postData:function(){
+      this.sended = true
       return api().post('user',this.form)
         .then(function(res){
           alert(res.data)
         })
+
     },
     push: function(){
       this.$router.push('About')
@@ -94,6 +98,10 @@ input {
         width: 500px;
         color: #ffffff;
       }
+      .scss{
+        color: #1ab188;
+        font-size: 40px;
+      }
       @media (max-width: 700px) {
         .frm {
           width: 100%;
@@ -105,5 +113,6 @@ input {
           margin: 15px auto;
 
         }
+
       }
 </style>
